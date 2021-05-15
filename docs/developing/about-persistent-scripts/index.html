@@ -1,0 +1,270 @@
+<!doctype html><html lang=en>
+<head>
+<title>About Persistent Scripts - Scratch Addons</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name=description content="Persistent scripts allow you to run JavaScript in the background! They're awesome to notify the user about stuff, or preload data so it's ready when the user needs it.">
+<meta name=author content>
+<link rel=icon href=/assets/img/icon.png>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scratchaddons.comdocs/developing/">
+<meta property="og:title" content="About Persistent Scripts">
+<meta property="og:description" content="Persistent scripts allow you to run JavaScript in the background! They're awesome to notify the user about stuff, or preload data so it's ready when the user needs it.">
+<meta property="og:site_name" content="Scratch Addons">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://scratchaddons.com/assets/img/icon-square.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="384">
+<meta property="og:image:height" content="384">
+<meta property="og:image:alt" content="Scratch Addons logo">
+<meta name=twitter:card content="summary">
+<meta name=twitter:url content="https://scratchaddons.github.iodocs/developing/">
+<meta name=twitter:title content="About Persistent Scripts - Scratch Addons">
+<meta name=twitter:description content="Persistent scripts allow you to run JavaScript in the background! They're awesome to notify the user about stuff, or preload data so it's ready when the user needs it.">
+<meta name=twitter:image content="https://scratchaddons.com/assets/img/icon-square.png">
+<meta name=twitter:image:alt content="Scratch Addons logo">
+<link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css crossorigin>
+<link rel=stylesheet href=/assets/css/base.css>
+<script src=https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1,npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js,npm/@iconify/iconify@1.0.7,npm/bowser@2.11.0 crossorigin></script>
+<script async src=/assets/js/website-base.js></script>
+<script async defer data-domain=scratchaddons.com src=/assets/js/plausible.outbound-links.js></script>
+<script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script>
+</head>
+<body><header>
+<nav class="navbar navbar-expand-md navbar-dark">
+<a href=/ class=navbar-brand>
+<img src=/assets/img/icon.svg alt="Scratch Addons"></img>
+<span>Scratch Addons</span>
+</a>
+<button class=navbar-toggler type=button data-toggle=collapse data-target=#navbar-collapsible aria-controls=navbar-collapsible aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse" id=navbar-collapsible>
+<ul class="navbar-nav ml-md-auto">
+<li class=nav-item><a class=nav-link href=/contributors>Contributors</a></li>
+<li class=nav-item><a class=nav-link href=/feedback>Send Feedback</a></li>
+<li class=nav-item><a class=nav-link href=https://github.com/ScratchAddons/ScratchAddons aria-label="Repository on GitHub" rel=noopener>Repository <span class=iconify data-icon=simple-icons:github></span></a></li>
+<li class=nav-item id=install-nav><a class="nav-link install-btn ml-md-2" href=/#install>Install</a></li>
+</ul>
+</div>
+</nav>
+</header>
+<link rel=stylesheet href=/assets/css/docs/base.css>
+<nav class="navbar navbar-light d-xl-none row border-bottom">
+<div class="col d-inline-flex align-items-middle d-lg-none">
+<button class="navbar-toggler align-left" type=button data-toggle=collapse data-target=#docs-pages aria-controls=docs-pages aria-expanded=false aria-label="Toggle page navigation sidebar">
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="d-flex align-items-center mx-2">
+<span>Docs navigation</span>
+</div>
+</div>
+<div class="col d-inline-flex flex-row-reverse d-xl-none">
+<button class="navbar-toggler d-xl-none align-right" type=button data-toggle=collapse data-target=#docs-toc aria-controls=docs-toc aria-expanded=false aria-label="Toggle table of contents sidebar">
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="d-flex align-items-center mx-2 text-right">
+<span>Table of contents</span>
+</div>
+</div>
+</nav>
+<main class="content container-fluid">
+<div class=row>
+<aside class="docs-pages col-lg-3 col-xl-2 d-lg-flex collapse order-1 order-lg-2 order-xl-1" id=docs-pages>
+<nav class=docs-nav aria-label="Docs navigation">
+<ul class="docs-nav-list text-muted"><li class=docs-nav-section>
+<span><a href=/docs/ class="docs-nav-page pl-0 pr-2 active">Home</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-docs><li class=docs-nav-section>
+<span><a class=collapse-button data-toggle=collapse href=#docs-nav-section-pages-docsdeveloping role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/developing/ class="docs-nav-page pl-0 pr-2 active">Developing</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-docsdeveloping><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docsdevelopinggetting-started role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/developing/getting-started/ class="docs-nav-page pl-0 pr-2 collapsed">Getting Started</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docsdevelopinggetting-started>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopinggetting-startedaddon-basics href=/docs/developing/getting-started/addon-basics/>Addon Basics</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopinggetting-startedcreating-an-addon href=/docs/developing/getting-started/creating-an-addon/>Creating an Addon</a>
+</li>
+</ul>
+</li>
+<li>
+<a class="docs-nav-page active" id=docs-nav-page-docsdevelopingabout-persistent-scripts href=/docs/developing/about-persistent-scripts/>About Persistent Scripts</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopingabout-userscripts href=/docs/developing/about-userscripts/>About Userscripts</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopingabout-userstyles href=/docs/developing/about-userstyles/>About Userstyles</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopingaddon-apis-reference href=/docs/developing/addon-apis-reference/>Addon APIs Reference</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopingaddontabtraps href=/docs/developing/addon.tab.traps/>addon.tab.traps</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopingdesign href=/docs/developing/design/>Design</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopinghow-to-add-an-icon-to-a-setting-name href=/docs/developing/how-to-add-an-icon-to-a-setting-name/>How to Add an Icon to a Setting Name</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopinginstalling-scratch-addons href=/docs/developing/installing-scratch-addons/>Installing Scratch Addons</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopingredux href=/docs/developing/redux/>Redux</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopingthe-addon-manifest-addonjson href=/docs/developing/the-addon-manifest-addon.json/>The Addon Manifest (addon.json)</a>
+</li>
+</ul>
+</li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docslocalization role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/localization/ class="docs-nav-page pl-0 pr-2 collapsed">Localization</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docslocalization>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docslocalizationhow-to-join-the-localization-team href=/docs/localization/how-to-join-the-localization-team/>How to Join the Localization Team</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docslocalizationlocalizing-addons href=/docs/localization/localizing-addons/>Localizing Addons</a>
+</li>
+</ul>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docschrome-web-store-privacy-information href=/docs/chrome-web-store-privacy-information/>Chrome Web Store Privacy Information</a>
+</li>
+</ul>
+</li></ul>
+</nav></aside>
+<article class="docs-main col col-lg-9 col-xl-8 order-3 order-lg-3 order-xl-2">
+<h1>About Persistent Scripts</h1>
+<h2 id=what-are-they>What are they? <a href=#what-are-they class=anchor aria-label=Anchor></a></h2><p>Persistent scripts allow you to run JavaScript in the background! They&rsquo;re awesome to notify the user about stuff, or preload data so it&rsquo;s ready when the user needs it.</p>
+<h2 id=how-do-i-add-a-persistent-script>How do I add a persistent script? <a href=#how-do-i-add-a-persistent-script class=anchor aria-label=Anchor></a></h2><p><strong>Make sure to refresh Scratch Addons from <code>chrome://extensions</code> after doing any changes to your addon.</strong><br>
+Go to the manifest of your addon (addon.json) and add a property called <code>"persistent_scripts"</code>.<br>
+This property must be an array, even if your addon will only use one persistent script.<br>
+Each item of the array must be a relative URL pointing to a JS file.
+Example manifest:</p>
+<div class=highlight><pre class=chroma><code class=language-json data-lang=json><span class=p>{</span>
+  <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Scratch Messaging&#34;</span><span class=p>,</span>
+  <span class=nt>&#34;description&#34;</span><span class=p>:</span> <span class=s2>&#34;Provides easy reading and replying to your Scratch messages.&#34;</span><span class=p>,</span>
+  <span class=nt>&#34;persistent_scripts&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;background.js&#34;</span><span class=p>],</span>
+  <span class=nt>&#34;tags&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;community&#34;</span><span class=p>],</span>
+  <span class=nt>&#34;enabled_by_default&#34;</span><span class=p>:</span> <span class=kc>false</span>
+<span class=p>}</span>
+</code></pre></div><h2 id=how-does-the-javascript-file-look-like>How does the JavaScript file look like? <a href=#how-does-the-javascript-file-look-like class=anchor aria-label=Anchor></a></h2><p>Persistent scripts, as well as userscript, require a specific structure to work.<br>
+For persistent scripts, you <strong>must</strong> wrap all your code inside a function looking like this:</p>
+<div class=highlight><pre class=chroma><code class=language-js data-lang=js><span class=kr>export</span> <span class=k>default</span> <span class=kr>async</span> <span class=kd>function</span> <span class=p>({</span> <span class=nx>addon</span><span class=p>,</span> <span class=nx>global</span><span class=p>,</span> <span class=nx>console</span><span class=p>,</span> <span class=nx>setTimeout</span><span class=p>,</span> <span class=nx>setInterval</span><span class=p>,</span> <span class=nx>clearTimeout</span><span class=p>,</span> <span class=nx>clearInterval</span> <span class=p>})</span> <span class=p>{</span>
+  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;Hello, &#34;</span> <span class=o>+</span> <span class=nx>addon</span><span class=p>.</span><span class=nx>auth</span><span class=p>.</span><span class=nx>username</span><span class=p>);</span>
+<span class=p>}</span>
+</code></pre></div><p>If you want to write your own functions to have cleaner code, you should include them inside the main function:<br>
+<strong>This will work:</strong></p>
+<div class=highlight><pre class=chroma><code class=language-js data-lang=js><span class=kr>export</span> <span class=k>default</span> <span class=kr>async</span> <span class=kd>function</span> <span class=p>({</span> <span class=nx>addon</span><span class=p>,</span> <span class=nx>global</span><span class=p>,</span> <span class=nx>console</span><span class=p>,</span> <span class=nx>setTimeout</span><span class=p>,</span> <span class=nx>setInterval</span><span class=p>,</span> <span class=nx>clearTimeout</span><span class=p>,</span> <span class=nx>clearInterval</span> <span class=p>})</span> <span class=p>{</span>
+  <span class=c1>// This works!
+</span><span class=c1></span>  <span class=nx>sayHello</span><span class=p>();</span>
+  <span class=kd>function</span> <span class=nx>sayHello</span><span class=p>()</span> <span class=p>{</span>
+    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;Hello, &#34;</span> <span class=o>+</span> <span class=nx>addon</span><span class=p>.</span><span class=nx>auth</span><span class=p>.</span><span class=nx>username</span><span class=p>);</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><p><strong>This will NOT work:</strong></p>
+<div class=highlight><pre class=chroma><code class=language-js data-lang=js><span class=kr>export</span> <span class=k>default</span> <span class=kr>async</span> <span class=kd>function</span> <span class=p>({</span> <span class=nx>addon</span><span class=p>,</span> <span class=nx>global</span><span class=p>,</span> <span class=nx>console</span><span class=p>,</span> <span class=nx>setTimeout</span><span class=p>,</span> <span class=nx>setInterval</span><span class=p>,</span> <span class=nx>clearTimeout</span><span class=p>,</span> <span class=nx>clearInterval</span> <span class=p>})</span> <span class=p>{</span>
+  <span class=c1>// This WON&#39;T work!
+</span><span class=c1></span>  <span class=nx>sayHello</span><span class=p>();</span>
+<span class=p>}</span>
+<span class=kd>function</span> <span class=nx>sayHello</span><span class=p>()</span> <span class=p>{</span>
+  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;Hello, &#34;</span> <span class=o>+</span> <span class=nx>addon</span><span class=p>.</span><span class=nx>auth</span><span class=p>.</span><span class=nx>username</span><span class=p>);</span>
+  <span class=c1>// Error: addon is not defined!
+</span><span class=c1></span><span class=p>}</span>
+</code></pre></div><h2 id=addon-apisdocsdevelopingaddon-apis-reference><a href=/docs/developing/addon-apis-reference><code>addon.*</code> APIs</a> <a href=#addon-apisdocsdevelopingaddon-apis-reference class=anchor aria-label=Anchor></a></h2><p>You can access most <code>addon.*</code> APIs from persistent scripts. For more information, check the documentation.</p>
+<h2 id=technical-aspects-of-persistent-scripts>Technical aspects of persistent scripts <a href=#technical-aspects-of-persistent-scripts class=anchor aria-label=Anchor></a></h2><p>Technically speaking, each persistent script is a JavaScript module that exports a function. JavaScript modules always run on &ldquo;strict mode&rdquo;. <br>
+This means that persistent scripts of the same addon DO NOT share variables and functions! If you want to do that, you should use the <code>global</code> object (more info below).
+Scratch Addons then calls that function modules exported, giving it access to the <code>addon.*</code> APIs, as well as special wrappers:</p>
+<ul>
+<li><code>addon</code>: gives persistent script access to the <a href=/docs/developing/addon-apis-reference><code>addon.*</code> APIs</a>.</li>
+<li><code>global</code>: this is a shared object between all persistent scripts of the same addon. <strong>Example usage:</strong></li>
+</ul>
+<div class=highlight><pre class=chroma><code class=language-js data-lang=js><span class=c1>// background-1.js
+</span><span class=c1></span><span class=kr>export</span> <span class=k>default</span> <span class=kr>async</span> <span class=kd>function</span> <span class=p>({</span> <span class=nx>addon</span><span class=p>,</span> <span class=nx>global</span><span class=p>,</span> <span class=nx>console</span><span class=p>,</span> <span class=nx>setTimeout</span><span class=p>,</span> <span class=nx>setInterval</span><span class=p>,</span> <span class=nx>clearTimeout</span><span class=p>,</span> <span class=nx>clearInterval</span> <span class=p>})</span> <span class=p>{</span>
+  <span class=nx>global</span><span class=p>.</span><span class=nx>sayHello</span> <span class=o>=</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;Hello, &#34;</span> <span class=o>+</span> <span class=nx>addon</span><span class=p>.</span><span class=nx>auth</span><span class=p>.</span><span class=nx>username</span><span class=p>);</span>
+<span class=p>}</span>
+
+<span class=c1>// background-2.js
+</span><span class=c1></span><span class=kr>export</span> <span class=k>default</span> <span class=kr>async</span> <span class=kd>function</span> <span class=p>({</span> <span class=nx>addon</span><span class=p>,</span> <span class=nx>global</span><span class=p>,</span> <span class=nx>console</span><span class=p>,</span> <span class=nx>setTimeout</span><span class=p>,</span> <span class=nx>setInterval</span><span class=p>,</span> <span class=nx>clearTimeout</span><span class=p>,</span> <span class=nx>clearInterval</span> <span class=p>})</span> <span class=p>{</span>
+  <span class=nx>global</span><span class=p>.</span><span class=nx>sayHello</span><span class=p>();</span>
+  <span class=c1>// This works, as long as in the addon manifest, background-1.js is before background-2.js in the persistent_scripts array.
+</span><span class=c1></span><span class=p>}</span>
+</code></pre></div><ul>
+<li><code>console</code>: this is a wrapper that allows you to see what addon triggered the log you&rsquo;re seeing easily.</li>
+<li><code>setTimeout</code> and <code>setInterval</code>: if your addon gets disabled while its running, Scratch Addons needs a wait to stop any pending timeouts and intervals. In order to successfully do that, addons must use these wrappers, instead of <code>window.setTimeout</code> and <code>window.setInterval</code>.</li>
+<li><code>clearTimeout</code> and <code>clearInterval</code>: these need to be wrapped as well to avoid memory leaks - Scratch Addons wouldn&rsquo;t know you cleared a timeout or an interval, and would be storing its timeout/interval ID for no reason. You should not use <code>window.clearTimeout</code> or <code>window.clearInterval</code> either.</li>
+</ul>
+<h2 id=debugging-persistent-scripts>Debugging persistent scripts <a href=#debugging-persistent-scripts class=anchor aria-label=Anchor></a></h2><p><strong>Make sure to refresh Scratch Addons from <code>chrome://extensions</code> after doing any changes to your addon.</strong><br>
+To debug persistent scripts, first of all make sure your addon is enabled.<br>
+Then, go to <code>chrome://extensions</code>, make sure developer mode is on, and find Scratch Addons.<br>
+Click where it says &ldquo;inspect views: background/background.html&rdquo;.<br>
+Well, that&rsquo;s it - any console logs from your addon will be there, and if you&rsquo;re a devtools pro, you won&rsquo;t have any trouble setting breakpoints in your code.<br>
+Protip: if you want to test the <code>addon.*</code> API without changing your file every time, make your addon <code>window.addon = addon;</code> (inside the main function), and you&rsquo;ll be able to access your addon&rsquo;s <code>addon</code> object from the console. Make sure to remove that line before contributing to this repo! Persistent scripts must not pollute the global object.</p>
+<hr>
+<p class=text-muted>
+Last updated at 13 May 2021 by Hans5958 on commit <a href=https://github.com/ScratchAddons/website-v2/commit/1118222592ed9610c920d1eea1b48371fafe1d47><code>1118222</code></a>.
+<a href=https://github.com/ScratchAddons/website-v2/edit/master/content/docs/developing/about-persistent-scripts.md>Improve this page.</a></p>
+</article>
+<aside class="docs-toc text-muted col-xl-2 d-xl-flex collapse order-2 order-lg-1 order-xl-3" id=docs-toc>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#what-are-they>What are they?</a></li>
+<li><a href=#how-do-i-add-a-persistent-script>How do I add a persistent script?</a></li>
+<li><a href=#how-does-the-javascript-file-look-like>How does the JavaScript file look like?</a></li>
+<li><a href=#addon-apisdocsdevelopingaddon-apis-reference><a href=/docs/developing/addon-apis-reference><code>addon.*</code> APIs</a></a></li>
+<li><a href=#technical-aspects-of-persistent-scripts>Technical aspects of persistent scripts</a></li>
+<li><a href=#debugging-persistent-scripts>Debugging persistent scripts</a></li>
+</ul>
+</nav>
+</aside>
+</div>
+</main><a id=dark-toggle class=btn title="Click to toggle the dark theme." aria-label="Dark theme switch button" data-toggle=tooltip data-placement=left></a>
+<footer class=footer>
+<div class=container>
+<section class=footer-intro>
+<a href=/ class="navbar-brand mb-3">
+<img src=/assets/img/icon.svg alt="Scratch Addons" class=mr-2></img>
+<span>Scratch Addons</span>
+</a>
+<iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=star&count=true&size=large" frameborder=0 scrolling=0 width=170 height=30 title=GitHub></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=fork&count=true&size=large" frameborder=0 scrolling=0 width=170 height=30 title=GitHub></iframe>
+</section>
+<section>
+<h3>Pages</h3>
+<a href=/faq>FAQ</a>
+<a href=/feedback>Send Feedback</a>
+<a href=/contributors>Contributors</a>
+<a href=/changelog>Changelog</a>
+<a href=/addons>Addons</a>
+</section>
+<section>
+<h3>Discuss</h3>
+<a href=https://github.com/ScratchAddons/ScratchAddons/discussions rel=noopener></a>
+<a href=https://github.com/ScratchAddons/ScratchAddons/issues rel=noopener>Issues</a>
+<a href=https://discord.gg/R5NBqwMjNc rel=noopener>Community Discord</a>
+<a href=https://discord.gg/Ak8sCDQ rel=noopener>Development Discord</a>
+</section>
+<section>
+<h3>Resources</h3>
+<a href=https://github.com/ScratchAddons rel=noopener>Organization</a>
+<a href=https://github.com/ScratchAddons/ScratchAddons rel=noopener>Repository</a>
+<a href=/docs rel=noopener>Documentation</a>
+<a href=https://www.youtube.com/channel/UCxS_mxVIz4iYGK3DKaupbMA rel=noopener>YouTube</a>
+</section>
+<section class="w-100 mt-3">
+<p>© 2021 Scratch Addons contributors</p>
+<p>Scratch Addons is not affiliated, associated, or in any way officially connected with Scratch, the Scratch Team, the Scratch Foundation, or any of its subsidiaries or its affiliates.</p>
+<p>Scratch Addons is licensed under the terms of GNU General Public License v3.0.</p>
+</section>
+</div>
+</footer></body>
+</html>

@@ -1,0 +1,339 @@
+<!doctype html><html lang=en>
+<head>
+<title>The Addon Manifest (addon.json) - Scratch Addons</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name=description content="In order to tell the addon loader how the addon plans to work, addons use a standard addon.json file located at the root of the addon's folder.">
+<meta name=author content>
+<link rel=icon href=/assets/img/icon.png>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scratchaddons.comdocs/developing/">
+<meta property="og:title" content="The Addon Manifest (addon.json)">
+<meta property="og:description" content="In order to tell the addon loader how the addon plans to work, addons use a standard addon.json file located at the root of the addon's folder.">
+<meta property="og:site_name" content="Scratch Addons">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://scratchaddons.com/assets/img/icon-square.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="384">
+<meta property="og:image:height" content="384">
+<meta property="og:image:alt" content="Scratch Addons logo">
+<meta name=twitter:card content="summary">
+<meta name=twitter:url content="https://scratchaddons.github.iodocs/developing/">
+<meta name=twitter:title content="The Addon Manifest (addon.json) - Scratch Addons">
+<meta name=twitter:description content="In order to tell the addon loader how the addon plans to work, addons use a standard addon.json file located at the root of the addon's folder.">
+<meta name=twitter:image content="https://scratchaddons.com/assets/img/icon-square.png">
+<meta name=twitter:image:alt content="Scratch Addons logo">
+<link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css crossorigin>
+<link rel=stylesheet href=/assets/css/base.css>
+<script src=https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1,npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js,npm/@iconify/iconify@1.0.7,npm/bowser@2.11.0 crossorigin></script>
+<script async src=/assets/js/website-base.js></script>
+<script async defer data-domain=scratchaddons.com src=/assets/js/plausible.outbound-links.js></script>
+<script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script>
+</head>
+<body><header>
+<nav class="navbar navbar-expand-md navbar-dark">
+<a href=/ class=navbar-brand>
+<img src=/assets/img/icon.svg alt="Scratch Addons"></img>
+<span>Scratch Addons</span>
+</a>
+<button class=navbar-toggler type=button data-toggle=collapse data-target=#navbar-collapsible aria-controls=navbar-collapsible aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse" id=navbar-collapsible>
+<ul class="navbar-nav ml-md-auto">
+<li class=nav-item><a class=nav-link href=/contributors>Contributors</a></li>
+<li class=nav-item><a class=nav-link href=/feedback>Send Feedback</a></li>
+<li class=nav-item><a class=nav-link href=https://github.com/ScratchAddons/ScratchAddons aria-label="Repository on GitHub" rel=noopener>Repository <span class=iconify data-icon=simple-icons:github></span></a></li>
+<li class=nav-item id=install-nav><a class="nav-link install-btn ml-md-2" href=/#install>Install</a></li>
+</ul>
+</div>
+</nav>
+</header>
+<link rel=stylesheet href=/assets/css/docs/base.css>
+<nav class="navbar navbar-light d-xl-none row border-bottom">
+<div class="col d-inline-flex align-items-middle d-lg-none">
+<button class="navbar-toggler align-left" type=button data-toggle=collapse data-target=#docs-pages aria-controls=docs-pages aria-expanded=false aria-label="Toggle page navigation sidebar">
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="d-flex align-items-center mx-2">
+<span>Docs navigation</span>
+</div>
+</div>
+<div class="col d-inline-flex flex-row-reverse d-xl-none">
+<button class="navbar-toggler d-xl-none align-right" type=button data-toggle=collapse data-target=#docs-toc aria-controls=docs-toc aria-expanded=false aria-label="Toggle table of contents sidebar">
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="d-flex align-items-center mx-2 text-right">
+<span>Table of contents</span>
+</div>
+</div>
+</nav>
+<main class="content container-fluid">
+<div class=row>
+<aside class="docs-pages col-lg-3 col-xl-2 d-lg-flex collapse order-1 order-lg-2 order-xl-1" id=docs-pages>
+<nav class=docs-nav aria-label="Docs navigation">
+<ul class="docs-nav-list text-muted"><li class=docs-nav-section>
+<span><a href=/docs/ class="docs-nav-page pl-0 pr-2 active">Home</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-docs><li class=docs-nav-section>
+<span><a class=collapse-button data-toggle=collapse href=#docs-nav-section-pages-docsdeveloping role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/developing/ class="docs-nav-page pl-0 pr-2 active">Developing</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-docsdeveloping><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docsdevelopinggetting-started role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/developing/getting-started/ class="docs-nav-page pl-0 pr-2 collapsed">Getting Started</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docsdevelopinggetting-started>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopinggetting-startedaddon-basics href=/docs/developing/getting-started/addon-basics/>Addon Basics</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopinggetting-startedcreating-an-addon href=/docs/developing/getting-started/creating-an-addon/>Creating an Addon</a>
+</li>
+</ul>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopingabout-persistent-scripts href=/docs/developing/about-persistent-scripts/>About Persistent Scripts</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopingabout-userscripts href=/docs/developing/about-userscripts/>About Userscripts</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopingabout-userstyles href=/docs/developing/about-userstyles/>About Userstyles</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopingaddon-apis-reference href=/docs/developing/addon-apis-reference/>Addon APIs Reference</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopingaddontabtraps href=/docs/developing/addon.tab.traps/>addon.tab.traps</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopingdesign href=/docs/developing/design/>Design</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopinghow-to-add-an-icon-to-a-setting-name href=/docs/developing/how-to-add-an-icon-to-a-setting-name/>How to Add an Icon to a Setting Name</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopinginstalling-scratch-addons href=/docs/developing/installing-scratch-addons/>Installing Scratch Addons</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopingredux href=/docs/developing/redux/>Redux</a>
+</li>
+<li>
+<a class="docs-nav-page active" id=docs-nav-page-docsdevelopingthe-addon-manifest-addonjson href=/docs/developing/the-addon-manifest-addon.json/>The Addon Manifest (addon.json)</a>
+</li>
+</ul>
+</li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docslocalization role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/localization/ class="docs-nav-page pl-0 pr-2 collapsed">Localization</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docslocalization>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docslocalizationhow-to-join-the-localization-team href=/docs/localization/how-to-join-the-localization-team/>How to Join the Localization Team</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docslocalizationlocalizing-addons href=/docs/localization/localizing-addons/>Localizing Addons</a>
+</li>
+</ul>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docschrome-web-store-privacy-information href=/docs/chrome-web-store-privacy-information/>Chrome Web Store Privacy Information</a>
+</li>
+</ul>
+</li></ul>
+</nav></aside>
+<article class="docs-main col col-lg-9 col-xl-8 order-3 order-lg-3 order-xl-2">
+<h1>The Addon Manifest (addon.json)</h1>
+<p>Addons are located inside the <code>addons</code> folder. Each addon is inside its own folder as well.
+In order to tell the addon loader how the addon plans to work, addons use a standard <code>addon.json</code> file located at the root of the addon&rsquo;s folder.</p>
+<h2 id=name-string-required><code>name</code> (string, required) <a href=#name-string-required class=anchor aria-label=Anchor></a></h2><p>The name of the addon. Don&rsquo;t make it too long.<br>
+Try to make a descriptive name, avoid words like &ldquo;Scratch&rdquo;, &ldquo;tool&rdquo;, &ldquo;feature&rdquo;.</p>
+<h2 id=description-string-required><code>description</code> (string, required) <a href=#description-string-required class=anchor aria-label=Anchor></a></h2><p>The description of the addons.
+For consistency, descriptions <strong>must</strong> end with a dot.</p>
+<h2 id=tags-array-required><code>tags</code> (array, required) <a href=#tags-array-required class=anchor aria-label=Anchor></a></h2><p>Tags are used for filtering and badges on the Scratch Addons settings page.<br>
+One of these is <strong>required</strong>: <code>community</code>, <code>editor</code>, <code>easterEgg</code>.<br>
+Other options are: <code>theme</code>, <code>beta</code>, <code>recommended</code>, <code>forums</code>.</p>
+<h2 id=permissions-array><code>permissions</code> (array) <a href=#permissions-array class=anchor aria-label=Anchor></a></h2><p>You can specify permissions by providing a <code>permissions</code> array.<br>
+Possible items: <code>"notifications"</code>, <code>"badge"</code>, <code>"clipboardWrite"</code>.</p>
+<h2 id=persistentscripts-array><code>persistentScripts</code> (array) <a href=#persistentscripts-array class=anchor aria-label=Anchor></a></h2><p>You can add persistent scripts by providing a <code>persistentScripts</code> array conformed of JS files (e.g. <code>["example.js"]</code>).</p>
+<h2 id=userscripts-and-userstyles-array><code>userscripts</code> and <code>userstyles</code> (array) <a href=#userscripts-and-userstyles-array class=anchor aria-label=Anchor></a></h2><p>Declaring userscripts and userstyles is very similar.
+Unlike persistent scripts, this is an array of objects, not strings.<br>
+Each object must specify the url to the userscript/userstyle through the <code>"url"</code> property, and provide an array of URL matches. If any of these patterns match, the userscript/userstyle is injected.</p>
+<div class=highlight><pre class=chroma><code class=language-json data-lang=json><span class=s2>&#34;userscripts&#34;</span><span class=err>:</span> <span class=p>[</span>
+  <span class=p>{</span>
+    <span class=nt>&#34;url&#34;</span><span class=p>:</span> <span class=s2>&#34;userscript.js&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;matches&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;https://scratch.mit.edu/*&#34;</span><span class=p>]</span>
+  <span class=p>},</span>
+  <span class=p>{</span>
+    <span class=nt>&#34;url&#34;</span><span class=p>:</span> <span class=s2>&#34;second_userscript.js&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;matches&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;https://scratch.mit.edu/&#34;</span><span class=p>,</span> <span class=s2>&#34;https://scratch.mit.edu/users/*&#34;</span><span class=p>]</span>
+  <span class=p>}</span>
+<span class=p>]</span>
+</code></pre></div><h3 id=settingmatch-object><code>settingMatch</code> (object) <a href=#settingmatch-object class=anchor aria-label=Anchor></a></h3><p>You can provide a <code>settingMatch</code> object that will result in your userscript/userstyle only running if the specified option is set to the specified value.</p>
+<div class=highlight><pre class=chroma><code class=language-json data-lang=json><span class=s2>&#34;userstyles&#34;</span><span class=err>:</span> <span class=p>[</span>
+  <span class=p>{</span>
+    <span class=nt>&#34;url&#34;</span><span class=p>:</span> <span class=s2>&#34;signature.css&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;matches&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;https://scratch.mit.edu/discuss/topic/*&#34;</span><span class=p>],</span>
+    <span class=nt>&#34;settingMatch&#34;</span><span class=p>:</span> <span class=p>{</span>
+      <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;signature&#34;</span><span class=p>,</span>
+      <span class=nt>&#34;value&#34;</span><span class=p>:</span> <span class=kc>true</span>
+    <span class=p>}</span>
+  <span class=p>}</span>
+<span class=p>]</span>
+</code></pre></div><h3 id=runatcomplete-boolean-userscripts-only><code>runAtComplete</code> (boolean, userscripts only) <a href=#runatcomplete-boolean-userscripts-only class=anchor aria-label=Anchor></a></h3><p>Specifies whether the userscript should run after the page has loaded (after the window load event). If unspecified, <code>true</code> is assumed.<br>
+If set to <code>false</code>, the userscript is only guaranteed to run after the &lt;head> element of the document has loaded.</p>
+<h2 id=settings-object><code>settings</code> (object) <a href=#settings-object class=anchor aria-label=Anchor></a></h2><p>Options allow the addon&rsquo;s users to specify settings in Scratch Addons' settings panel. Inside your persistent scripts and userscripts, you can then access those settings with the <code>addon.settings</code> API.<br>
+Specify a <code>settings</code> property and provide an array of option objects.</p>
+<p>The properties of the object are as follows. All properties are required.</p>
+<ul>
+<li><code>"name"</code>: the user-visible text for the option.</li>
+<li><code>"id"</code>: an identifier to get the user-specified value from your code.</li>
+<li><code>"type"</code>: either <code>"boolean"</code> (a checkbox), <code>"positive_integer"</code> (an input box that only allows 0 and above), <code>"string"</code> (up to 100 chars),<code>"color"</code> (a browser color input that returns a hex code) or <code>"select"</code> (see <code>"potential_values"</code>).</li>
+<li><code>"default"</code>: the default value for the option. A boolean, string, or number, depending on the specified type.</li>
+<li><code>"potential_values"</code>: for <code>"select"</code> type only. Array of strings.</li>
+<li><code>"allowTransparency"</code>: for <code>"color"</code> type only. Boolean.</li>
+</ul>
+<div class=highlight><pre class=chroma><code class=language-json data-lang=json><span class=s2>&#34;settings&#34;</span><span class=err>:</span> <span class=p>[</span>
+  <span class=p>{</span>
+    <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Send notifications&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;send_notifications&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;boolean&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;default&#34;</span><span class=p>:</span> <span class=kc>false</span>
+  <span class=p>},</span>
+  <span class=p>{</span>
+    <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Notification close delay in seconds&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;close_delay&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;positive_integer&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;default&#34;</span><span class=p>:</span> <span class=mi>5</span>
+  <span class=p>}</span>
+<span class=p>]</span>
+</code></pre></div><h2 id=credits-array><code>credits</code> (array) <a href=#credits-array class=anchor aria-label=Anchor></a></h2><p>You can provide a <code>credits</code> array of objects. This attribution is shown in the extension settings.<br>
+These objects must have a <code>"name"</code> attribute set to a string, and they can have a <code>"link"</code> attribute with a URL value.<br>
+Example:</p>
+<div class=highlight><pre class=chroma><code class=language-json data-lang=json><span class=s2>&#34;credits&#34;</span><span class=err>:</span> <span class=p>[</span>
+  <span class=p>{</span>
+    <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Maximouse&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;link&#34;</span><span class=p>:</span> <span class=s2>&#34;https://github.com/mxmou/customize-scratch#watch-youtube-videos-on-scratch-in-full-screen&#34;</span>
+  <span class=p>}</span>
+<span class=p>]</span>
+</code></pre></div><h2 id=enabledbydefault-boolean><code>enabledByDefault</code> (boolean) <a href=#enabledbydefault-boolean class=anchor aria-label=Anchor></a></h2><p>You can provide the <code>enabledByDfault</code> property and set it to <code>true</code> to specify if the addon should be enabled by default. Its default value is <code>false</code>.<br>
+Keep in mind, few addons will be enabled by default. If you want your addon to be enabled by default, please open a discussion issue.</p>
+<h2 id=info-array><code>info</code> (array) <a href=#info-array class=anchor aria-label=Anchor></a></h2><p>An array of additional information (e.g. warnings, notices) about the addon. Each item of the array is an object consisting of <code>type</code> (string) -either <code>warning</code> or <code>notice</code> - <code>text</code> (string) - the text to be displayed - and <code>id</code> (string) - the id of the information.
+Example:</p>
+<div class=highlight><pre class=chroma><code class=language-json data-lang=json><span class=s2>&#34;info&#34;</span><span class=err>:</span> <span class=p>[</span>
+  <span class=p>{</span>
+    <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;notice&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;text&#34;</span><span class=p>:</span> <span class=s2>&#34;Example notice.&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;exmapleID&#34;</span>
+  <span class=p>},</span>
+  <span class=p>{</span>
+    <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;warning&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;text&#34;</span><span class=p>:</span> <span class=s2>&#34;Example warning.&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;exmapleID&#34;</span>
+  <span class=p>}</span>
+<span class=p>]</span>
+</code></pre></div><h2 id=traps-boolean><code>traps</code> (boolean) <a href=#traps-boolean class=anchor aria-label=Anchor></a></h2><p>If set to <code>true</code>, userscripts for the addon will be able to use <code>addon.tab.traps</code>. The default value is <code>false</code>.</p>
+<h2 id=presets-array><code>presets</code> (array) <a href=#presets-array class=anchor aria-label=Anchor></a></h2><p>An array of presets for the addon. Each item in the <code>presets</code> array should be an object consisting of <code>name</code> (string), <code>id</code>(string), <code>description</code> (string) and <code>values</code> (object). The keys in the <code>values</code> object should the addon settings ids, and the values should be the values to set the setting with the id of the key to.</p>
+<p>Example:</p>
+<div class=highlight><pre class=chroma><code class=language-json data-lang=json><span class=s2>&#34;presets&#34;</span><span class=err>:</span> <span class=p>[</span>	
+  <span class=p>{</span>	
+    <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;preset 1&#34;</span><span class=p>,</span>	
+    <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;preset1&#34;</span><span class=p>,</span>	
+    <span class=nt>&#34;desctiption&#34;</span><span class=p>:</span> <span class=s2>&#34;the first preset&#34;</span><span class=p>,</span>	
+    <span class=nt>&#34;values&#34;</span><span class=p>:</span> <span class=p>{</span>	
+      <span class=nt>&#34;boolean_setting&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>	
+      <span class=nt>&#34;string_setting&#34;</span><span class=p>:</span> <span class=s2>&#34;This is a string setting&#34;</span><span class=p>,</span>	
+      <span class=nt>&#34;integer_setting&#34;</span><span class=p>:</span> <span class=mi>180</span>	
+    <span class=p>}</span>	
+  <span class=p>}</span>	
+<span class=p>]</span>	
+</code></pre></div><h2 id=l10n-boolean><code>l10n</code> (boolean) <a href=#l10n-boolean class=anchor aria-label=Anchor></a></h2><p>Indicates whether localization files for the addon should be loaded. Defaults to <code>false</code>.</p>
+<h2 id=libraries-array><code>libraries</code> (array) <a href=#libraries-array class=anchor aria-label=Anchor></a></h2><p>An array of libraries that the addon uses.</p>
+<h2 id=popup-object><code>popup</code> (object) <a href=#popup-object class=anchor aria-label=Anchor></a></h2><p>When added, creates a new popup tab in the browser popup.
+Example:</p>
+<pre><code>  &quot;popup&quot;: {
+    &quot;icon&quot;: &quot;../../images/icons/envelope.svg&quot;,
+    &quot;name&quot;: &quot;Messaging&quot;,
+    &quot;fullscreen&quot;: true
+  },
+</code></pre><h2 id=dynamicdisable-boolean><code>dynamicDisable</code> (boolean) <a href=#dynamicdisable-boolean class=anchor aria-label=Anchor></a></h2><p>Indicates whether the addon&rsquo;s scripts should be considered disabled when disabled as the page is running. Defaults to <code>false</code>.</p>
+<h2 id=dynamicenable-boolean><code>dynamicEnable</code> (boolean) <a href=#dynamicenable-boolean class=anchor aria-label=Anchor></a></h2><p>Indicates whether the addon&rsquo;s scripts should be considered enabled when enabled as the page is running. Defaults to <code>false</code>.</p>
+<h2 id=injectasstyleelt-boolean><code>injectAsStyleElt</code> (boolean) <a href=#injectasstyleelt-boolean class=anchor aria-label=Anchor></a></h2><p>Indicates whether the addon&rsquo;s userstyles should be injected as style elements rather than link elements. Defaults to <code>false</code>.</p>
+<h2 id=updateuserstylesonsettingschange-boolean><code>updateUserstylesOnSettingsChange</code> (boolean) <a href=#updateuserstylesonsettingschange-boolean class=anchor aria-label=Anchor></a></h2><p>Indicates whether the addon&rsquo;s userstyles should be removed and rematched to the new settings. Defaults to <code>false</code>.</p>
+<hr>
+<p class=text-muted>
+Last updated at 13 May 2021 by Hans5958 on commit <a href=https://github.com/ScratchAddons/website-v2/commit/1118222592ed9610c920d1eea1b48371fafe1d47><code>1118222</code></a>.
+<a href=https://github.com/ScratchAddons/website-v2/edit/master/content/docs/developing/the-addon-manifest-%28addon.json%29.md>Improve this page.</a></p>
+</article>
+<aside class="docs-toc text-muted col-xl-2 d-xl-flex collapse order-2 order-lg-1 order-xl-3" id=docs-toc>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#name-string-required><code>name</code> (string, required)</a></li>
+<li><a href=#description-string-required><code>description</code> (string, required)</a></li>
+<li><a href=#tags-array-required><code>tags</code> (array, required)</a></li>
+<li><a href=#permissions-array><code>permissions</code> (array)</a></li>
+<li><a href=#persistentscripts-array><code>persistentScripts</code> (array)</a></li>
+<li><a href=#userscripts-and-userstyles-array><code>userscripts</code> and <code>userstyles</code> (array)</a>
+<ul>
+<li><a href=#settingmatch-object><code>settingMatch</code> (object)</a></li>
+<li><a href=#runatcomplete-boolean-userscripts-only><code>runAtComplete</code> (boolean, userscripts only)</a></li>
+</ul>
+</li>
+<li><a href=#settings-object><code>settings</code> (object)</a></li>
+<li><a href=#credits-array><code>credits</code> (array)</a></li>
+<li><a href=#enabledbydefault-boolean><code>enabledByDefault</code> (boolean)</a></li>
+<li><a href=#info-array><code>info</code> (array)</a></li>
+<li><a href=#traps-boolean><code>traps</code> (boolean)</a></li>
+<li><a href=#presets-array><code>presets</code> (array)</a></li>
+<li><a href=#l10n-boolean><code>l10n</code> (boolean)</a></li>
+<li><a href=#libraries-array><code>libraries</code> (array)</a></li>
+<li><a href=#popup-object><code>popup</code> (object)</a></li>
+<li><a href=#dynamicdisable-boolean><code>dynamicDisable</code> (boolean)</a></li>
+<li><a href=#dynamicenable-boolean><code>dynamicEnable</code> (boolean)</a></li>
+<li><a href=#injectasstyleelt-boolean><code>injectAsStyleElt</code> (boolean)</a></li>
+<li><a href=#updateuserstylesonsettingschange-boolean><code>updateUserstylesOnSettingsChange</code> (boolean)</a></li>
+</ul>
+</nav>
+</aside>
+</div>
+</main><a id=dark-toggle class=btn title="Click to toggle the dark theme." aria-label="Dark theme switch button" data-toggle=tooltip data-placement=left></a>
+<footer class=footer>
+<div class=container>
+<section class=footer-intro>
+<a href=/ class="navbar-brand mb-3">
+<img src=/assets/img/icon.svg alt="Scratch Addons" class=mr-2></img>
+<span>Scratch Addons</span>
+</a>
+<iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=star&count=true&size=large" frameborder=0 scrolling=0 width=170 height=30 title=GitHub></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=fork&count=true&size=large" frameborder=0 scrolling=0 width=170 height=30 title=GitHub></iframe>
+</section>
+<section>
+<h3>Pages</h3>
+<a href=/faq>FAQ</a>
+<a href=/feedback>Send Feedback</a>
+<a href=/contributors>Contributors</a>
+<a href=/changelog>Changelog</a>
+<a href=/addons>Addons</a>
+</section>
+<section>
+<h3>Discuss</h3>
+<a href=https://github.com/ScratchAddons/ScratchAddons/discussions rel=noopener></a>
+<a href=https://github.com/ScratchAddons/ScratchAddons/issues rel=noopener>Issues</a>
+<a href=https://discord.gg/R5NBqwMjNc rel=noopener>Community Discord</a>
+<a href=https://discord.gg/Ak8sCDQ rel=noopener>Development Discord</a>
+</section>
+<section>
+<h3>Resources</h3>
+<a href=https://github.com/ScratchAddons rel=noopener>Organization</a>
+<a href=https://github.com/ScratchAddons/ScratchAddons rel=noopener>Repository</a>
+<a href=/docs rel=noopener>Documentation</a>
+<a href=https://www.youtube.com/channel/UCxS_mxVIz4iYGK3DKaupbMA rel=noopener>YouTube</a>
+</section>
+<section class="w-100 mt-3">
+<p>© 2021 Scratch Addons contributors</p>
+<p>Scratch Addons is not affiliated, associated, or in any way officially connected with Scratch, the Scratch Team, the Scratch Foundation, or any of its subsidiaries or its affiliates.</p>
+<p>Scratch Addons is licensed under the terms of GNU General Public License v3.0.</p>
+</section>
+</div>
+</footer></body>
+</html>

@@ -1,0 +1,222 @@
+<!doctype html><html lang=en>
+<head>
+<title>Redux - Scratch Addons</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name=description content="Scratch Addons supports getting and modifying Redux state!">
+<meta name=author content>
+<link rel=icon href=/assets/img/icon.png>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scratchaddons.comdocs/developing/">
+<meta property="og:title" content="Redux">
+<meta property="og:description" content="Scratch Addons supports getting and modifying Redux state!">
+<meta property="og:site_name" content="Scratch Addons">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://scratchaddons.com/assets/img/icon-square.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="384">
+<meta property="og:image:height" content="384">
+<meta property="og:image:alt" content="Scratch Addons logo">
+<meta name=twitter:card content="summary">
+<meta name=twitter:url content="https://scratchaddons.github.iodocs/developing/">
+<meta name=twitter:title content="Redux - Scratch Addons">
+<meta name=twitter:description content="Scratch Addons supports getting and modifying Redux state!">
+<meta name=twitter:image content="https://scratchaddons.com/assets/img/icon-square.png">
+<meta name=twitter:image:alt content="Scratch Addons logo">
+<link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css crossorigin>
+<link rel=stylesheet href=/assets/css/base.css>
+<script src=https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1,npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js,npm/@iconify/iconify@1.0.7,npm/bowser@2.11.0 crossorigin></script>
+<script async src=/assets/js/website-base.js></script>
+<script async defer data-domain=scratchaddons.com src=/assets/js/plausible.outbound-links.js></script>
+<script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script>
+</head>
+<body><header>
+<nav class="navbar navbar-expand-md navbar-dark">
+<a href=/ class=navbar-brand>
+<img src=/assets/img/icon.svg alt="Scratch Addons"></img>
+<span>Scratch Addons</span>
+</a>
+<button class=navbar-toggler type=button data-toggle=collapse data-target=#navbar-collapsible aria-controls=navbar-collapsible aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse" id=navbar-collapsible>
+<ul class="navbar-nav ml-md-auto">
+<li class=nav-item><a class=nav-link href=/contributors>Contributors</a></li>
+<li class=nav-item><a class=nav-link href=/feedback>Send Feedback</a></li>
+<li class=nav-item><a class=nav-link href=https://github.com/ScratchAddons/ScratchAddons aria-label="Repository on GitHub" rel=noopener>Repository <span class=iconify data-icon=simple-icons:github></span></a></li>
+<li class=nav-item id=install-nav><a class="nav-link install-btn ml-md-2" href=/#install>Install</a></li>
+</ul>
+</div>
+</nav>
+</header>
+<link rel=stylesheet href=/assets/css/docs/base.css>
+<nav class="navbar navbar-light d-xl-none row border-bottom">
+<div class="col d-inline-flex align-items-middle d-lg-none">
+<button class="navbar-toggler align-left" type=button data-toggle=collapse data-target=#docs-pages aria-controls=docs-pages aria-expanded=false aria-label="Toggle page navigation sidebar">
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="d-flex align-items-center mx-2">
+<span>Docs navigation</span>
+</div>
+</div>
+<div class="col d-inline-flex flex-row-reverse d-xl-none">
+<button class="navbar-toggler d-xl-none align-right" type=button data-toggle=collapse data-target=#docs-toc aria-controls=docs-toc aria-expanded=false aria-label="Toggle table of contents sidebar">
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="d-flex align-items-center mx-2 text-right">
+<span>Table of contents</span>
+</div>
+</div>
+</nav>
+<main class="content container-fluid">
+<div class=row>
+<aside class="docs-pages col-lg-3 col-xl-2 d-lg-flex collapse order-1 order-lg-2 order-xl-1" id=docs-pages>
+<nav class=docs-nav aria-label="Docs navigation">
+<ul class="docs-nav-list text-muted"><li class=docs-nav-section>
+<span><a href=/docs/ class="docs-nav-page pl-0 pr-2 active">Home</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-docs><li class=docs-nav-section>
+<span><a class=collapse-button data-toggle=collapse href=#docs-nav-section-pages-docsdeveloping role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/developing/ class="docs-nav-page pl-0 pr-2 active">Developing</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-docsdeveloping><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docsdevelopinggetting-started role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/developing/getting-started/ class="docs-nav-page pl-0 pr-2 collapsed">Getting Started</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docsdevelopinggetting-started>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopinggetting-startedaddon-basics href=/docs/developing/getting-started/addon-basics/>Addon Basics</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopinggetting-startedcreating-an-addon href=/docs/developing/getting-started/creating-an-addon/>Creating an Addon</a>
+</li>
+</ul>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopingabout-persistent-scripts href=/docs/developing/about-persistent-scripts/>About Persistent Scripts</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopingabout-userscripts href=/docs/developing/about-userscripts/>About Userscripts</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopingabout-userstyles href=/docs/developing/about-userstyles/>About Userstyles</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopingaddon-apis-reference href=/docs/developing/addon-apis-reference/>Addon APIs Reference</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopingaddontabtraps href=/docs/developing/addon.tab.traps/>addon.tab.traps</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopingdesign href=/docs/developing/design/>Design</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopinghow-to-add-an-icon-to-a-setting-name href=/docs/developing/how-to-add-an-icon-to-a-setting-name/>How to Add an Icon to a Setting Name</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopinginstalling-scratch-addons href=/docs/developing/installing-scratch-addons/>Installing Scratch Addons</a>
+</li>
+<li>
+<a class="docs-nav-page active" id=docs-nav-page-docsdevelopingredux href=/docs/developing/redux/>Redux</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopingthe-addon-manifest-addonjson href=/docs/developing/the-addon-manifest-addon.json/>The Addon Manifest (addon.json)</a>
+</li>
+</ul>
+</li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docslocalization role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/localization/ class="docs-nav-page pl-0 pr-2 collapsed">Localization</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docslocalization>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docslocalizationhow-to-join-the-localization-team href=/docs/localization/how-to-join-the-localization-team/>How to Join the Localization Team</a>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docslocalizationlocalizing-addons href=/docs/localization/localizing-addons/>Localizing Addons</a>
+</li>
+</ul>
+</li>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docschrome-web-store-privacy-information href=/docs/chrome-web-store-privacy-information/>Chrome Web Store Privacy Information</a>
+</li>
+</ul>
+</li></ul>
+</nav></aside>
+<article class="docs-main col col-lg-9 col-xl-8 order-3 order-lg-3 order-xl-2">
+<h1>Redux</h1>
+<p>Scratch Addons supports getting and modifying Redux state!</p>
+<h2 id=keep-in-mind>Keep in mind <a href=#keep-in-mind class=anchor aria-label=Anchor></a></h2><ul>
+<li>Redux only applies on new page (ones with new navigation bar, including editor)</li>
+<li>Some extensions conflict with ScratchAddons' Redux feature. Do not use this when unnecessary.</li>
+<li>We expect readers to have basic knowledge on Redux and Scratch&rsquo;s reducers.</li>
+</ul>
+<h2 id=get-redux-state>Get redux state <a href=#get-redux-state class=anchor aria-label=Anchor></a></h2><p><code>addon.tab.redux.state</code> stores current Redux state. For example, to get message count: <code>addon.tab.redux.state.messageCount.messageCount</code></p>
+<h2 id=events>Events <a href=#events class=anchor aria-label=Anchor></a></h2><p><code>addon.tab.redux.addEventListener("statechanged", callback)</code> to add event listeners for state changes. The callback can have one argument which is a CustomEvent with following attributes:</p>
+<ul>
+<li><code>action</code>: Dispatched action. See Redux docs for what it means.</li>
+<li><code>prev</code>: Previous state.</li>
+<li><code>next</code>: Next state.</li>
+</ul>
+<h2 id=dispatching-event>Dispatching event <a href=#dispatching-event class=anchor aria-label=Anchor></a></h2><p>You can dispatch events using <code>addon.tab.redux.dispatch(eventObject)</code>. Event object must have <code>type</code> attribute and can have other attributes. For details on what to dispatch, read reducer codes on scratch-www, scratch-gui or scratch-paint:</p>
+<ul>
+<li><a href=https://github.com/LLK/scratch-www/tree/develop/src/redux>https://github.com/LLK/scratch-www/tree/develop/src/redux</a></li>
+<li><a href=https://github.com/LLK/scratch-gui/tree/develop/src/reducers>https://github.com/LLK/scratch-gui/tree/develop/src/reducers</a></li>
+<li><a href=https://github.com/LLK/scratch-paint/tree/develop/src/reducers>https://github.com/LLK/scratch-paint/tree/develop/src/reducers</a></li>
+</ul>
+<hr>
+<p class=text-muted>
+Last updated at 13 May 2021 by Hans5958 on commit <a href=https://github.com/ScratchAddons/website-v2/commit/1118222592ed9610c920d1eea1b48371fafe1d47><code>1118222</code></a>.
+<a href=https://github.com/ScratchAddons/website-v2/edit/master/content/docs/developing/redux.md>Improve this page.</a></p>
+</article>
+<aside class="docs-toc text-muted col-xl-2 d-xl-flex collapse order-2 order-lg-1 order-xl-3" id=docs-toc>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#keep-in-mind>Keep in mind</a></li>
+<li><a href=#get-redux-state>Get redux state</a></li>
+<li><a href=#events>Events</a></li>
+<li><a href=#dispatching-event>Dispatching event</a></li>
+</ul>
+</nav>
+</aside>
+</div>
+</main><a id=dark-toggle class=btn title="Click to toggle the dark theme." aria-label="Dark theme switch button" data-toggle=tooltip data-placement=left></a>
+<footer class=footer>
+<div class=container>
+<section class=footer-intro>
+<a href=/ class="navbar-brand mb-3">
+<img src=/assets/img/icon.svg alt="Scratch Addons" class=mr-2></img>
+<span>Scratch Addons</span>
+</a>
+<iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=star&count=true&size=large" frameborder=0 scrolling=0 width=170 height=30 title=GitHub></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=fork&count=true&size=large" frameborder=0 scrolling=0 width=170 height=30 title=GitHub></iframe>
+</section>
+<section>
+<h3>Pages</h3>
+<a href=/faq>FAQ</a>
+<a href=/feedback>Send Feedback</a>
+<a href=/contributors>Contributors</a>
+<a href=/changelog>Changelog</a>
+<a href=/addons>Addons</a>
+</section>
+<section>
+<h3>Discuss</h3>
+<a href=https://github.com/ScratchAddons/ScratchAddons/discussions rel=noopener></a>
+<a href=https://github.com/ScratchAddons/ScratchAddons/issues rel=noopener>Issues</a>
+<a href=https://discord.gg/R5NBqwMjNc rel=noopener>Community Discord</a>
+<a href=https://discord.gg/Ak8sCDQ rel=noopener>Development Discord</a>
+</section>
+<section>
+<h3>Resources</h3>
+<a href=https://github.com/ScratchAddons rel=noopener>Organization</a>
+<a href=https://github.com/ScratchAddons/ScratchAddons rel=noopener>Repository</a>
+<a href=/docs rel=noopener>Documentation</a>
+<a href=https://www.youtube.com/channel/UCxS_mxVIz4iYGK3DKaupbMA rel=noopener>YouTube</a>
+</section>
+<section class="w-100 mt-3">
+<p>© 2021 Scratch Addons contributors</p>
+<p>Scratch Addons is not affiliated, associated, or in any way officially connected with Scratch, the Scratch Team, the Scratch Foundation, or any of its subsidiaries or its affiliates.</p>
+<p>Scratch Addons is licensed under the terms of GNU General Public License v3.0.</p>
+</section>
+</div>
+</footer></body>
+</html>
